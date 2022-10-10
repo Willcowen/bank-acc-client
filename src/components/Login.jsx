@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "./Login.css";
 import { useNavigate } from 'react-router-dom';
+import client from '../utils/client'
+import storage from '../utils/storage'
 
 function Login() {
 
@@ -32,10 +33,10 @@ function Login() {
 
   return (
     <form className="login">
-      <h1>Transaction App</h1>
+      <h1>Transaction App - Login</h1>
       <div className="login--email">
         <label for="email">Email</label>
-        <input type="text" id="login--email--input" name="email" value={user.email} onChange={handleChange} />
+        <input type="email" id="login--email--input" name="email" value={user.email} onChange={handleChange} />
       </div>
       <div className="login--password">
         <label for="lname">Password</label>
